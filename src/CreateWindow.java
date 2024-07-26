@@ -25,9 +25,9 @@ public class CreateWindow {
     }
 
     private void whitePanels(){
-        Panel_Img panel_img = new Panel_Img(jf,widthPanelImg,heighPanelImgAndPlay);//панель рисует картинку
-        PanelPlay panelPlay = new PanelPlay(jf,widthPanelImg,heighPanelImgAndPlay,widthPanelPlay, widhtHeighLaben);//панель рисует где загаданы бук
-        PanekKeyboard panekKeyboard = new PanekKeyboard(jf,widthPanelImg,heighPanelImgAndPlay,widthPanelPlay);//панель клавиатуры
+        new Panel_Img(jf,widthPanelImg,heighPanelImgAndPlay);//панель рисует картинку
+        new PanelPlay(jf,widthPanelImg,heighPanelImgAndPlay,widthPanelPlay, widhtHeighLaben);//панель рисует где загаданы бук
+        new PanekKeyboard(jf,widthPanelImg,heighPanelImgAndPlay,widthPanelPlay);//панель клавиатуры
     }
 
     private int widthPanelPlay(){

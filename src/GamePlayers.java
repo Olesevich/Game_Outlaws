@@ -14,7 +14,7 @@ public class GamePlayers {
         wordis = translatiomStringInMassivString();
         setWin();
         getWordis();
-        CreateWindow cw = new CreateWindow();
+        new CreateWindow();
     }
 
     private void downloadWrodsEnvisioned(){
