@@ -11,7 +11,7 @@ public class PanekKeyboard extends JPanel {
 
     public PanekKeyboard(JFrame jf, int widthPanelImg, int heighPanelImgAndPlay, int widthPanelPlay) {
         creatPanel.createPanel(jf, this,widthPanelImg,heighPanelImgAndPlay/2,widthPanelPlay,
-                heighPanelImgAndPlay/2, new Color(100,100,10));
+                heighPanelImgAndPlay/2, ColorsUsed.colorKeyboard);
         buttons(widthPanelPlay, heighPanelImgAndPlay/2);
     }
 
@@ -53,14 +53,21 @@ public class PanekKeyboard extends JPanel {
         int a = 0;
         for (int i = 0; i < GamePlayers.wordes.length ; i++) {
             if (button.getText().equals(GamePlayers.wordes[i])){
+                pushButton(button, ColorsUsed.colorPushKeyboardRight);
                 PanelPlay.setLabels(i,button.getText());
                 GamePlayers.win--;
                 a++;
             }
         }
         if (a == 0){
+            pushButton(button, ColorsUsed.colorPushKeyboardWrong);
             GamePlayers.live--;
         }
+    }
+
+    private void pushButton(JButton button, Color color){
+        button.setBackground((color));
+        button.setEnabled(false);
     }
 
 }

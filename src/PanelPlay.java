@@ -7,8 +7,9 @@ public class PanelPlay extends JPanel {
     private static JLabel [] labels;
 
     public PanelPlay(JFrame jf, int widthPanelImg, int heighPanelImgAndPlay, int widthPanelPlay, int widhtHeighLaben) {
-        creatPanel.createPanel(jf, this,widthPanelImg,0,widthPanelPlay,heighPanelImgAndPlay/2, new Color(250,0,23));
+        creatPanel.createPanel(jf, this,widthPanelImg,0,widthPanelPlay,heighPanelImgAndPlay/2, ColorsUsed.colorPanelPlay);
         createLab(widhtHeighLaben);
+        creatTextCondition(widthPanelPlay);
     }
 
     private void createLab(int widhtHeighLaben){
@@ -20,5 +21,11 @@ public class PanelPlay extends JPanel {
 
     public static void setLabels(int i,String str) {
         labels[i].setText(str);
+    }
+
+    private void creatTextCondition(int widthPanelPlay){
+        JLabel jLabel = new JLabel("Угадайте фрукт, который загадан!");
+        add(jLabel);
+        jLabel.setBounds( (widthPanelPlay-200)/2,0,200,80);
     }
 }

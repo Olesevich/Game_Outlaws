@@ -14,7 +14,7 @@ public class CreateButtons extends JButton {
         setVerticalAlignment(CENTER);
         setMargin(new Insets(1,1,1,1));
         setFont(new Font("Times New Roman", Font.PLAIN, 10));
-        setBackground(Color.pink);
+        setBackground(ColorsUsed.colorButtonKeyboard);
         setFocusPainted(false);
         setVisible(true);
     }

@@ -7,7 +7,7 @@ public class Panel_Img extends JPanel {
     CreatPanel creatPanel = new CreatPanel();
 
     public Panel_Img(JFrame jf, int widthPanelImg, int heighPanelImgAndPlay) {
-        creatPanel.createPanel(jf, this,0,0,widthPanelImg,heighPanelImgAndPlay, new Color(20, 240,230));
+        creatPanel.createPanel(jf, this,0,0,widthPanelImg,heighPanelImgAndPlay, ColorsUsed.colorPanelIng);
     }
 
     @Override
@@ -26,6 +26,7 @@ public class Panel_Img extends JPanel {
             g.drawLine(140,20,140,50);
         }
         if (GamePlayers.live < 6){
+            g.setColor(ColorsUsed.colorHuman);
             g.drawOval(120,50,40,40);
         }
         if (GamePlayers.live < 5){

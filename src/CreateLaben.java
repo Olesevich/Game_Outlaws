@@ -11,7 +11,7 @@ public class CreateLaben extends JLabel {
         panel.add(this);
         setBounds(30 + j, 80, w_h_room,w_h_room);
         setOpaque(true);
-        setBackground(new Color(100,200,1));
+        setBackground(ColorsUsed.colorLabel);
         setHorizontalAlignment(CENTER);
         setVerticalAlignment(CENTER);
         setFont(new Font("Times New Roman", Font.PLAIN, 20));

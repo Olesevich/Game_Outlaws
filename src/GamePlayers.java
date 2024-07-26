@@ -7,13 +7,14 @@ public class GamePlayers {
     private String [] wordis;//массив с заданым словом.
     public static String [] wordes;
     public static int win;
-    public static int live = 10;// количество жизней
+    public static int live;// количество жизней
 
     public GamePlayers() {
         downloadWrodsEnvisioned();
         wordis = translatiomStringInMassivString();
         setWin();
         getWordis();
+        live = 10;
         new CreateWindow();
     }
 
@@ -21,7 +22,6 @@ public class GamePlayers {
         try {
             DownloadAndSelect das = new DownloadAndSelect();
             words = das.getFrukt();
-//            System.out.println(words);//времено для проверок
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -58,6 +58,4 @@ public class GamePlayers {
             System.exit(1);
         }
     }
-
-
 }

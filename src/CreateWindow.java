@@ -15,7 +15,7 @@ public class CreateWindow {
     }
 
     private void creatWindow(){
-        jf = new JFrame("Висилиница (игра головоломка)");
+        jf = new JFrame("Виселиница (игра головоломка)");
         jf.setSize(WIDTH_PANEL_IMG_PLAY + WIDTH_PANEL_PlAY + 14, HEIGH_PANEL_IMG_PLAY + 37);
         jf.setLayout(null);
         jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
