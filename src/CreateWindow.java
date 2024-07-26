@@ -3,20 +3,20 @@ import javax.swing.*;
 public class CreateWindow {
 
     private static JFrame jf;
-    private int widthPanelImg = 200;//размеры(ширина) панели где будет размещена картинка
-    private int heighPanelImgAndPlay = 300;//размеры(высота) панели где будет размещена картинка и игровое поле
-    private int widthPanelPlay;//ширина панели где будет размещена игровое поле
-    private int widhtHeighLaben = 30; //размеры квадратов куда помещены буквы угадываемого слова
+    private final int WIDTH_PANEL_IMG_PLAY = 200;//размеры(ширина) панели где будет размещена картинка
+    private final int HEIGH_PANEL_IMG_PLAY = 300;//размеры(высота) панели где будет размещена картинка и игровое поле
+    private final int WIDTH_PANEL_PlAY;//ширина панели где будет размещена игровое поле
+    private  final int WIDHT_HEIGH_LABEN = 30; //размеры квадратов куда помещены буквы угадываемого слова
 
     public CreateWindow() {
-        widthPanelPlay = widthPanelPlay();
+        WIDTH_PANEL_PlAY = widthPanelPlay();
         creatWindow();
         whitePanels();
     }
 
     private void creatWindow(){
         jf = new JFrame("Висилиница (игра головоломка)");
-        jf.setSize(widthPanelImg + widthPanelPlay + 14, heighPanelImgAndPlay + 37);
+        jf.setSize(WIDTH_PANEL_IMG_PLAY + WIDTH_PANEL_PlAY + 14, HEIGH_PANEL_IMG_PLAY + 37);
         jf.setLayout(null);
         jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         jf.setLocationRelativeTo(null);
@@ -25,13 +25,13 @@ public class CreateWindow {
     }
 
     private void whitePanels(){
-        new Panel_Img(jf,widthPanelImg,heighPanelImgAndPlay);//панель рисует картинку
-        new PanelPlay(jf,widthPanelImg,heighPanelImgAndPlay,widthPanelPlay, widhtHeighLaben);//панель рисует где загаданы бук
-        new PanekKeyboard(jf,widthPanelImg,heighPanelImgAndPlay,widthPanelPlay);//панель клавиатуры
+        new Panel_Img(jf, WIDTH_PANEL_IMG_PLAY, HEIGH_PANEL_IMG_PLAY);//панель рисует картинку
+        new PanelPlay(jf, WIDTH_PANEL_IMG_PLAY, HEIGH_PANEL_IMG_PLAY, WIDTH_PANEL_PlAY, WIDHT_HEIGH_LABEN);//панель рисует где загаданы бук
+        new PanekKeyboard(jf, WIDTH_PANEL_IMG_PLAY, HEIGH_PANEL_IMG_PLAY, WIDTH_PANEL_PlAY);//панель клавиатуры
     }
 
     private int widthPanelPlay(){
-        return 60 + widhtHeighLaben * GamePlayers.wordes.length + widhtHeighLaben * (GamePlayers.wordes.length - 1);//60-это расстояние между краями до букв с двух сторон по 30
+        return 60 + WIDHT_HEIGH_LABEN * GamePlayers.wordes.length + WIDHT_HEIGH_LABEN * (GamePlayers.wordes.length - 1);//60-это расстояние между краями до букв с двух сторон по 30
     }
 
     public static void closeWindow(){
